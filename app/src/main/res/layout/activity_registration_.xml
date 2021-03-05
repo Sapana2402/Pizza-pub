@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/loginback"
+    tools:context=".Registration_Activity">
+    <LinearLayout
+        android:id="@+id/l1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_gravity="left"
+        android:layout_marginTop="100dp"
+
+        android:background="@drawable/loginnestedback"
+
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="30dp"
+            android:layout_marginTop="100dp"
+            android:text="Registration"/>
+
+        <EditText
+            android:id="@+id/usee_email"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:ems="10"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:inputType="textPersonName"
+            android:hint="Email" />
+
+
+        <EditText
+            android:id="@+id/user_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:hint="Password"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/user_confirmpassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:hint="Confirm Password"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/ragistation_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:backgroundTint="@color/blue"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:text="Ragistation" />
+        <Button
+            android:id="@+id/redirect_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/blue"
+            android:textStyle="bold"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:text="Login" />
+
+
+    </LinearLayout>
+</LinearLayout>

@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.pizzapub.Adapter.Burger_Adapter;
 import com.example.pizzapub.Adapter.ComboAdapter;
@@ -17,14 +18,19 @@ import com.example.pizzapub.Adapter.OurSpecialAdapter;
 public class MainActivity extends AppCompatActivity {
     RecyclerView recyclerView,burger_recyclerview,combo_recyclerview;
     ImageView glass;
+    TextView userEmail;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-glass=findViewById(R.id.glass);
+        glass=findViewById(R.id.glass);
+        userEmail =findViewById(R.id.email);
 
         glass.setAnimation(AnimationUtils.loadAnimation(MainActivity.this,R.anim.splash_anim));
+
+        String email=getIntent().getExtras().getString("email");
+        userEmail.setText(email);
 
         MyListData[] myListData = new MyListData[] {
                 new MyListData( "Margarita","₹299","with 100% real cheese",R.drawable.pizza1),
@@ -39,9 +45,6 @@ glass=findViewById(R.id.glass);
                 new MyListData( "Margarita","₹499","Sweet & Spicy",R.drawable.pizza10),
                 new MyListData( "Fresh Veggie","₹299","sweet",R.drawable.pizza11),
                 new MyListData( "Margarita","₹199","Spicy",R.drawable.pizza12),
-
-
-
         };
 
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);

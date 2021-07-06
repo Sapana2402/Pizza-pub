@@ -78,7 +78,7 @@ public class Registration_Activity extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful()){
-                                        Intent loginintent = new Intent(Registration_Activity.this,MainActivity.class);
+                                        Intent loginintent = new Intent(Registration_Activity.this,LoginActivity.class);
                                         startActivity(loginintent);
                                     }else{
                                         Toast.makeText(Registration_Activity.this,"Ragister Unsuccessfully",Toast.LENGTH_LONG)

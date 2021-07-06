@@ -60,8 +60,9 @@ public class LoginActivity extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful()){
-                                        Intent loginintent = new Intent(LoginActivity.this,MainActivity.class);
-                                        startActivity(loginintent);
+                                        Intent loginIntent = new Intent(LoginActivity.this,MainActivity.class);
+                                        loginIntent.putExtra("email",email);
+                                        startActivity(loginIntent);
                                     }else{
                                         Toast.makeText(LoginActivity.this,"Login Unsuccessfully",Toast.LENGTH_LONG)
                                                 .show();
